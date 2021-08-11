@@ -28,20 +28,23 @@ class Song
   end
 
   def self.genre_count
-    hash = {}
-    @@genres.each do |genre|
-      hash[genre] ||= 0 # if it is nil, assign 0,  a = b unless a 
-      hash[genre] += 1
-    end
-    hash
+    @@genres.tally
+    # hash = {}
+    # @@genres.each do |genre|
+    #   hash[genre] ||= 0 # if it is nil, assign 0,  a = b unless a 
+    #   hash[genre] += 1
+    # end
+    # hash
   end
 
   def self.artist_count
-    hash = {}
-    @@artists.each do |artist|
-      hash[artist] ||= 0 # if it is nil, assign 0,  a = b unless a 
-      hash[artist] += 1
-    end
-    hash
+    @@artists.tally
   end
+#     hash = {}
+#     @@artists.each do |artist|
+#       hash[artist] ||= 0 # if it is nil, assign 0,  a = b unless a 
+#       hash[artist] += 1
+#     end
+#     hash
+#   end
 end
